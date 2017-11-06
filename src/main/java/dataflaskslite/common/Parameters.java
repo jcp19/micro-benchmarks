@@ -10,5 +10,5 @@ public class Parameters {
     public static long NUMCYCLES = 5;
     public static long INTERVAL = 1000;
     public static int VIEWSIZE = 3;//(int)Math.ceil(NUMPEERS/2);
-    public static int GOSSIPSIZE = VIEWSIZE;
+    public static int GOSSIPSIZE = VIEWSIZE-1;
 }
