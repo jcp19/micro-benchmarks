@@ -15,7 +15,7 @@ public class Example1Minha {
             World world = new Simulation();
             Host host = world.createHost();
             Process proc = host.createProcess();
-            Entry<Example1> example = proc.createEntry(Example1.class, Example1.class.getName());
+            Entry<IExample> example = proc.createEntry(IExample.class, Example1.class.getName());
             example.call().main(new String[]{});
             world.run();
             world.close();
