@@ -1,4 +1,5 @@
 package rexbenchmarks;
+
 import java.util.concurrent.locks.Lock;
 
 class Thread2E1 extends Thread {
