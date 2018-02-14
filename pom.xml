@@ -59,6 +59,24 @@
             <version>3.1-SNAPSHOT</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-graph-impl</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.jung</groupId>
+            <artifactId>jung-algorithms</artifactId>
+            <version>2.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -70,7 +88,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                             <mainClass>dataflaskslite.test.DFMainMinha</mainClass>
+                            <mainClass>cyclonlite.test.CyclonLiteMainMinha</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -90,7 +108,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                           <mainClass>dataflaskslite.test.DFMainMinha</mainClass>
+                            <mainClass>cyclonlite.test.CyclonLiteMainMinha</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
