@@ -13,6 +13,7 @@ class Thread1E1 extends Thread {
     public void run() {
         for(int i=0; i<10; i++) {
             lock.lock();
+            System.out.println("T1: c.x = 2 (iteration "+i+")");
             c.x = 2;
             lock.unlock();
         }
