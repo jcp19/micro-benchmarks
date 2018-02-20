@@ -16,7 +16,7 @@ public class Example1Minha {
             Host host = world.createHost();
             Process proc = host.createProcess();
             Entry<IExample> example = proc.createEntry(IExample.class, Example1.class.getName());
-            example.call().mainMinha(new String[]{});
+            example.queue().mainMinha(new String[]{});
             world.run();
             world.close();
         } catch (Exception e) {
