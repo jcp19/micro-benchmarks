@@ -23,7 +23,7 @@ class Example2Thread2 extends Thread {
             // TODO: what about spurious wakes?
             try {
                 if(c.x < 10) {
-                    //System.out.println("\t\tT2: await");
+                    System.out.println("\t\tT2: await");
                     canAdvance.await();
                 }
             } catch (Exception e) {
@@ -32,7 +32,7 @@ class Example2Thread2 extends Thread {
                 conditionOwner.unlock();
             }
             c.x = 10+i;
-            //System.out.println("\t\tT2: c.x = "+c.x);
+            System.out.println("\t\tT2: c.x = "+c.x);
             lock.unlock();
         }
     }

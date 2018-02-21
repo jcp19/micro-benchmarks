@@ -19,9 +19,9 @@ class Example2Thread1 extends Thread {
         for(int i=0; i<10; i++) {
             lock.lock();
             c.x = i;
-            //System.out.println("T1: c.x = "+c.x);
+            System.out.println("T1: c.x = "+c.x);
             conditionOwner.lock();
-            //System.out.println("T1: signal");
+            System.out.println("T1: signal");
             canAdvance.signalAll();
             conditionOwner.unlock();
             lock.unlock();
