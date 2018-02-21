@@ -1,6 +1,6 @@
 package rexbenchmarks;
 
-public class Example0 implements IExample{
+public class Example0 {
     public void mainMinha(String[] args){
         Counter c = new Counter();
         Example0Thread t1 = new Example0Thread(c);
