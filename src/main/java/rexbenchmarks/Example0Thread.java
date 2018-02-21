@@ -1,9 +1,9 @@
 package rexbenchmarks;
 
-public class ThreadE0 extends Thread {
+public class Example0Thread extends Thread {
     Counter c;
 
-    public ThreadE0(Counter c) {
+    public Example0Thread(Counter c) {
        this.c = c;
     }
 

@@ -2,11 +2,11 @@ package rexbenchmarks;
 
 import java.util.concurrent.locks.Lock;
 
-class Thread2E1 extends Thread {
+class Example1Thread2 extends Thread {
     Lock lock;
     Counter c;
 
-    Thread2E1(Lock lock, Counter c) {
+    Example1Thread2(Lock lock, Counter c) {
         this.lock = lock;
         this.c = c;
     }
@@ -15,7 +15,7 @@ class Thread2E1 extends Thread {
         for(int i=0; i<10; i++) {
             lock.lock();
             // System.out.println("\t\tT2: c.x = 1 (iteration "+i+")");
-            c.x = 1;
+            c.x = i;
             lock.unlock();
         }
     }

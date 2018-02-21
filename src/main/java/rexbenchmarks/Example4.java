@@ -1,15 +1,12 @@
 package rexbenchmarks;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class Example4 implements IExample {
     public void mainMinha(String[] args) {
-       ThreadIEx4[] tis = new ThreadIEx4[4];
+       Example4ThreadI[] tis = new Example4ThreadI[4];
 
        Counter c = new Counter();
        for(int i=1; i<=3; i++) {
-           tis[i] = new ThreadIEx4(i,c);
+           tis[i] = new Example4ThreadI(i,c);
            tis[i].start();
        }
        for(int i=1; i<=3; i++) {
@@ -21,11 +18,11 @@ public class Example4 implements IExample {
     }
 
     public static void main(String[] args) {
-       ThreadIEx4[] tis = new ThreadIEx4[4];
+       Example4ThreadI[] tis = new Example4ThreadI[4];
 
        Counter c = new Counter();
        for(int i=1; i<=3; i++) {
-           tis[i] = new ThreadIEx4(i,c);
+           tis[i] = new Example4ThreadI(i,c);
            tis[i].start();
        }
        for(int i=1; i<=3; i++) {

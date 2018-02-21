@@ -2,12 +2,12 @@ package rexbenchmarks;
 
 import java.util.concurrent.locks.Lock;
 
-public class Thread2E3 extends Thread {
+public class Example3Thread2 extends Thread {
     Lock lock;
     Counter c;
     int i;
 
-    public Thread2E3(Lock lock, Counter c, int i) {
+    public Example3Thread2(Lock lock, Counter c, int i) {
         this.lock = lock;
         this.c = c;
         this.i = i;
