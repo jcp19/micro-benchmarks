@@ -12,7 +12,7 @@ public class Example0Minha {
             Process proc = host.createProcess();
 
             Entry<Main> example = proc.createEntry();
-            example.call().main(Example2.class.getName(), new String[]{});
+            example.call().main(Example0.class.getName(), new String[]{});
 
             world.run();
             world.close();
