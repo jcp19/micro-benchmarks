@@ -13,6 +13,7 @@ public class Example3Thread1 extends Thread {
 
     @Override
     public void run() {
+        System.out.println("Start T1 - lock");
         for(int i = 0; i < 10; i++) {
             //forces the read to happen
             System.out.println(c.x);
@@ -22,5 +23,6 @@ public class Example3Thread1 extends Thread {
             c.x = 1;
             lock.unlock();
         }
+        System.out.println("End T1 - unlock");
     }
 }
