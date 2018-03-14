@@ -17,6 +17,7 @@ class Example2Thread1 extends Thread {
     @Override
     public void run() {
         for(int i=0; i<10; i++) {
+            System.out.println("1");
             lock.lock();
             c.x = i;
             System.out.println("T1: c.x = "+c.x);

@@ -22,5 +22,6 @@ public class Example3Thread1 extends Thread {
             c.x = 1;
             lock.unlock();
         }
+        System.out.println("Thread 0 terminou");
     }
 }

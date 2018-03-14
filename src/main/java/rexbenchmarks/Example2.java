@@ -14,6 +14,19 @@ public class Example2 {
         Example2Thread2 t2 = new Example2Thread2(new ReentrantLock(), c, conditionOwner, canAdvance);
         t2.start();
         t1.start();
+
+        try {
+          t1.join();
+          while(t2.getState() != Thread.State.TERMINATED){
+            conditionOwner.lock();
+            canAdvance.signalAll();
+            conditionOwner.unlock();
+            Thread.sleep(700);
+          }
+        } catch (InterruptedException e) {
+
+        }
+
     }
 }
 

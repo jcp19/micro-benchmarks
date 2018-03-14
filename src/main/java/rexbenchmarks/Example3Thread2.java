@@ -18,5 +18,6 @@ public class Example3Thread2 extends Thread {
         if(i <= 5) { lock.lock(); }
         c.x = 1;
         if(i <= 5) { lock.unlock(); }
+        System.out.println("Thread " + i + " terminou");
     }
 }
