@@ -18,6 +18,7 @@ class Example2Thread2 extends Thread {
     @Override
     public void run() {
         for(int i=0; i<10; i++) {
+            System.out.println("3");
             lock.lock();
             conditionOwner.lock();
             // TODO: what about spurious wakes?

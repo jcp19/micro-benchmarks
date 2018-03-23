@@ -15,10 +15,9 @@ public class Example3Thread2 extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Start T"+i+((i <= 5) ? " - lock" : ""));
         if(i <= 5) { lock.lock(); }
         c.x = 1;
         if(i <= 5) { lock.unlock(); }
-        System.out.println("End T"+i+((i <= 5) ? " - unlock" : ""));
+        System.out.println("Thread " + i + " terminou");
     }
 }
