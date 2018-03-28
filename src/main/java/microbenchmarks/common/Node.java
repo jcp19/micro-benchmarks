@@ -24,7 +24,7 @@ public abstract class Node extends Thread {
         } catch (SocketException e) {
             e.printStackTrace();
         }
-        System.out.println("["+id+"] started");
+        System.out.println("["+id+"] started @ "+myip);
     }
 
     @Override
