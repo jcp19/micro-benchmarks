@@ -7,7 +7,8 @@ import pt.minha.api.sim.Simulation;
 public class ExampleDistributedMinha {
 
     public static void main(String args[]){
-        int SENDERS = 4;
+        int SENDERS = args.length > 0 ? Integer.valueOf(args[0]) : 5;
+        System.out.println("SENDERS = "+SENDERS);
 
         try {
             World world = new Simulation();

@@ -28,7 +28,8 @@ public class Receiver extends Node {
                 socket.receive(packet);
                 String msg = new String(packet.getData(), 0, packet.getLength());
                 int value = Integer.valueOf(msg);
-                if(value == 0){
+                if(value%2 == 0){
+                    System.out.println("[Receiver-main] reset counter = "+c.x);
                     c.x = 0;
                 }
                 else{
@@ -41,7 +42,7 @@ public class Receiver extends Node {
                 if(workers[i]!=null)
                     workers[i].join();
             }
-            System.out.println("[Receiver] counter = "+c.x);
+            System.out.println("[Receiver-main] counter = "+c.x);
         }
         catch (Exception e){
             e.printStackTrace();
@@ -71,6 +72,7 @@ public class Receiver extends Node {
             this.value = value;
             this.c = counter;
             this.l = lock;
+            this.setName("Worker-"+this.id);
         }
 
         @Override

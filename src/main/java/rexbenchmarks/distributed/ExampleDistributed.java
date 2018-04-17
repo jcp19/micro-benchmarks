@@ -7,7 +7,8 @@ import java.util.List;
 public class ExampleDistributed {
 
     public static void main(String args[]){
-        int SENDERS = 4;
+        int SENDERS = args.length > 0 ? Integer.valueOf(args[0]) : 5;
+        System.out.println("SENDERS = "+SENDERS);
 
         InetSocketAddress ipR = new InetSocketAddress("127.0.0.1",2180);
         Receiver r = new Receiver("NR", ipR, SENDERS);
