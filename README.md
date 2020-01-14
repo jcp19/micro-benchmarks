@@ -1,4 +1,4 @@
-## Minha Benchmarks
+# micro-benchmarks
 
 This repository contains micro-benchmarks with distributed data races: 
 - package `microbenchmarks` includes a number of micro-benchmarks simulating real-world concurrency bugs of popular distributed applications. The name of each package indicates the application name (`m` - MapReduce, `h` - Hadoop) and the issue number in the corresponding bug repository.
